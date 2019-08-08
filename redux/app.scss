@@ -1,0 +1,63 @@
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+
+.toastContainer {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 100;
+    .toast {
+        display: block;
+        position: absolute;
+        right: 5px;
+        opacity: 100;
+        min-height: 75px;
+        min-width: 200px;
+        max-width: 350px;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 4s;
+        animation: fadein 0.5s, fadeout 0.5s 4s;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        right: 0;
+        opacity: 0;
+    }
+    to {
+        right: 5px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        right: 0;
+        opacity: 0;
+    }
+    to {
+        right: 5px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        right: 5px;
+        opacity: 1;
+    }
+    to {
+        right: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        right: 5px;
+        opacity: 1;
+    }
+    to {
+        right: 0;
+        opacity: 0;
+    }
+}

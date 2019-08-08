@@ -8,11 +8,8 @@ module.exports = env => {
         case "mobx":
             service = "./mobx/index.js";
             break;
-        case "context":
-            service = "./context/app.js";
-            break;
         default:
-            service = "./redux/app.js";
+            service = "./redux/index.js";
             break;
     }
     return {
@@ -37,7 +34,7 @@ module.exports = env => {
                 },
                 {
                     test: /\.scss$/,
-                    exclude: [/styles/, /mobx/],
+                    exclude: [/styles/, /mobx/, /redux/],
                     use: [
                         {
                             loader: "style-loader",
@@ -66,7 +63,7 @@ module.exports = env => {
                 },
                 {
                     test: /\.scss$/,
-                    include: [/styles/, /mobx/],
+                    include: [/styles/, /mobx/, /redux/],
                     use: [
                         {
                             loader: "style-loader",
